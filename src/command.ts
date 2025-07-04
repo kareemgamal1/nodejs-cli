@@ -1,8 +1,8 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-import { findNotes, getAllNotes, newNote, removeAllNotes, removeNote } from "./notes.js";
-import { start } from "./server.js";
-import { logNotes } from "./utils.js";
+import { findNotes, getAllNotes, newNote, removeAllNotes, removeNote } from "./notes.ts";
+import { start } from "./server.ts";
+import { logNotes } from "./utils.ts";
 
 yargs(hideBin(process.argv))
     .command(
@@ -56,7 +56,7 @@ yargs(hideBin(process.argv))
         "remove a note by id",
         (yargs) => {
             return yargs.positional("id", {
-                type: "number",
+                type: "string",
                 description: "The id of the note you want to remove",
             });
         },

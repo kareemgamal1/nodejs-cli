@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2022", // The ECMAScript target version
+    "module": "node18",
+    "moduleResolution": "node16",
+    "strict": true, // Enable all strict type-checking options
+    "esModuleInterop": true, // Enable import syntax for non-ESM modules
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // The output directory for compiled JS
+    "rootDir": "./src", // The directory where your TypeScript files are
+    "types": [
+      "node",
+      "jest"
+    ], // Use Node.js types
+    "isolatedModules": true,
+  },
+  "include": [
+    "src/**/*"
+  ], // Your TypeScript files will be inside the src folder
+  "exclude": [
+    "node_modules"
+  ]
+}
