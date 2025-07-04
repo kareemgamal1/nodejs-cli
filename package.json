@@ -1,11 +1,14 @@
 {
   "name": "nodejs-cli",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "bin": {
-    "note": "./index.js"
+    "note": "./dist/index.js"
   },
   "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "dev": "npx tsx src/index.ts",
     "test": "node --experimental-vm-modules --no-warnings ./node_modules/jest/bin/jest.js",
     "test:verbose": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
   },
