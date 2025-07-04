@@ -1,4 +1,4 @@
-import { Note } from "./types/note.ts";
+import { Note } from "./types/note.js";
 
 export const logNotes = (notes: Note[]) => {
   if (!notes || notes.length === 0) {

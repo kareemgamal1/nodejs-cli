@@ -1,4 +1,4 @@
-import { Note } from "./note.ts";
+import { Note } from "./note.js";
 
 export type Database = {
   notes: Note[];

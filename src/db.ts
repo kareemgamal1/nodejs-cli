@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { Note } from "./types/note.ts";
-import { Database } from "./types/database.ts";
+import { Note } from "./types/note.js";
+import { Database } from "./types/database.js";
 
 const DB_URL = new URL("../db.json", import.meta.url);
 const DB_PATH = fileURLToPath(DB_URL);

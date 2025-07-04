@@ -1,6 +1,6 @@
 import crypto from "node:crypto";
-import { getDB, insertDB, saveDB } from "./db.ts";
-import { Note } from "./types/note.ts";
+import { getDB, insertDB, saveDB } from "./db.js";
+import { Note } from "./types/note.js";
 
 export const newNote = async (note: string, tags: string[]) => {
   const newNote = {

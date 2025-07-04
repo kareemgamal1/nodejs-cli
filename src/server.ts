@@ -1,7 +1,7 @@
 import fs from "node:fs/promises";
 import http from "node:http";
 import open from "open";
-import { Note } from "./types/note.ts";
+import { Note } from "./types/note.js";
 
 export const interpolate = (html: string, data: { notes: string }) => {
   return html.replace(/\{\{\s*(\w+)\s*\}\}/g, (_, placeholder) => {
