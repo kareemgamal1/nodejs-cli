@@ -75,25 +75,25 @@ The file system operations are abstracted using Node's `fs/promises`.
 
 ## 🛠️ Tech Stack
 
-| Tech / Tool            | Purpose                        |
-| ---------------------- | ------------------------------ |
-| Node.js                | Runtime environment            |
-| yargs                  | CLI command parsing            |
-| node:fs/promises       | Async file operations          |
-| node:crypto            | UUID generation                |
-| node:http              | Web server to display notes    |
-| node: open             | Launches the server in browser |
-| Jest                   | Testing framework              |
-| Express _(Planned)_    | Web framework for REST API     |
-| Prisma _(Planned)_     | ORM for database integration   |
-| TypeScript _(Planned)_ | Type safety and tooling        |
-| Supertest _(Planned)_  | HTTP API testing               |
+| Tech / Tool           | Purpose                        |
+| --------------------- | ------------------------------ |
+| Node.js               | Runtime environment            |
+| yargs                 | CLI command parsing            |
+| node:fs/promises      | Async file operations          |
+| node:crypto           | UUID generation                |
+| node:http             | Web server to display notes    |
+| node: open            | Launches the server in browser |
+| TypeScript            | Type safety and tooling        |
+| Jest                  | Testing framework              |
+| Express _(Planned)_   | Web framework for REST API     |
+| Prisma _(Planned)_    | ORM for database integration   |
+| Supertest _(Planned)_ | HTTP API testing               |
 
 ---
 
 ## 🛣️ Upcoming Improvements
 
-- [ ] Convert to TypeScript
+- [x] Convert to TypeScript
 - [ ] Replace file storage with Prisma + SQLite/PostgreSQL
 - [ ] Use Express for HTTP APIs
 - [ ] Add HTTPS support
@@ -134,7 +134,7 @@ The project will include testing using Jest and Supertest.
 
 ```bash
 # Run tests (once implemented)
-npm test
+pnpm test
 ```
 
 ---
@@ -151,30 +151,30 @@ npm test
 
 ## 🏃‍♂️ How to Run It
 
-1. **Install dependencies:**
+1. **Install pnpm:**
 
 ```bash
-npm install
+https://pnpm.io/installation
 ```
 
-2. **Link the CLI locally:**  
+2. **Install dependencies:**
+
+```bash
+pnpm i
+```
+
+3. **Link the CLI locally:**  
    This creates a global `note` command based on the `bin` field in `package.json`.
 
 ```bash
-npm link
+pnpm link -g
 ```
 
-3. **Use it:**  
+4. **Use it:**  
    Now you can run commands like:
 
 ```bash
 note new "remember the milk"
 note all
 note web
-```
-
-4. **Unlink it (if needed):**
-
-```bash
-npm unlink
 ```
