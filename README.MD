@@ -157,20 +157,28 @@ pnpm test
 https://pnpm.io/installation
 ```
 
+
 2. **Install dependencies:**
 
 ```bash
 pnpm i
 ```
 
-3. **Link the CLI locally:**  
+
+3. **Build the project:**
+
+```bash
+pnpm build
+```
+
+4. **Link the CLI locally:**  
    This creates a global `note` command based on the `bin` field in `package.json`.
 
 ```bash
 pnpm link -g
 ```
 
-4. **Use it:**  
+5. **Use it:**  
    Now you can run commands like:
 
 ```bash
